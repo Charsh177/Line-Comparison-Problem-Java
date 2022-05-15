@@ -7,6 +7,7 @@ public class LineComparisonProgram {
 
         // Calculate length of a line
         Scanner sc = new Scanner(System.in);
+        System.out.println("Calculation for first line length");
         System.out.print("Enter x1 co-ordinate: ");
         int x1 = sc.nextInt();
         System.out.print("Enter x2 co-ordinate: ");
@@ -22,6 +23,7 @@ public class LineComparisonProgram {
         double len_of_line = Math.sqrt(x + y);
         System.out.println("Length of the line is " + len_of_line);
 
+        // Check equality of two length
         double len_of_line1 = Math.sqrt(x + y);
         System.out.println("Length of line 1 is " + len_of_line1);
 
@@ -45,10 +47,5 @@ public class LineComparisonProgram {
             System.out.println("Length are equal");
         else
             System.out.println("Length are not equal");
-
-        if (len_of_line1 > len_of_line2)
-            System.out.println("Line 1 is greater than Line 2");
-        else
-            System.out.println("Line 1 is less than Line 2");
     }
 }
