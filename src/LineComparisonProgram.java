@@ -19,7 +19,6 @@ public class LineComparisonProgram {
 
         double x = Math.pow((x2 - x1), 2);
         double y = Math.pow((y2 - y1), 2);
-
         double len_of_line = Math.sqrt(x + y);
         System.out.println("Length of the line is " + len_of_line);
 
@@ -39,7 +38,6 @@ public class LineComparisonProgram {
 
         double p = Math.pow((x4 - x3), 2);
         double s = Math.pow((y4 - y3), 2);
-
         double len_of_line2 = Math.sqrt(p + s);
         System.out.println("Length of line 2 is " + len_of_line2);
 
