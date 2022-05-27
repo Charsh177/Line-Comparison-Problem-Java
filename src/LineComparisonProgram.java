@@ -1,14 +1,26 @@
+import java.util.Scanner;
+
 public class LineComparisonProgram {
+
+    void lengthCalculate() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter x1 co-ordinate : ");
+        int x1 = sc.nextInt();
+        System.out.println("Enter x2 co-ordinate : ");
+        int x2 = sc.nextInt();
+        System.out.println("Enter y1 co-ordinate : ");
+        int y1 = sc.nextInt();
+        System.out.println("Enter y2 co-ordinate : ");
+        int y2 = sc.nextInt();
+
+        Double lenOfLineFirst = Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2));
+        System.out.println("Length of first line is " + lenOfLineFirst);
+    }
+
     public static void main(String[] args) {
-        int x1 = 7;
-        int x2 = 4;
-        int y1 = 9;
-        int y2 = 6;
 
-        double x = Math.pow((x2 - x1), 2);
-        double y = Math.pow((y2 - y1), 2);
-
-        Double len_of_line = Math.floor(Math.sqrt(x + y));
-        System.out.println("Length of the first line " + len_of_line);
+        System.out.println("Welcome to Line Comparison Computation Program");
+        LineComparisonProgram lineComparison = new LineComparisonProgram();
+        lineComparison.lengthCalculate();
     }
 }
