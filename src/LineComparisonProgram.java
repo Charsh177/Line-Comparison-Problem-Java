@@ -42,5 +42,16 @@ public class LineComparisonProgram {
             System.out.println("Lines are equal");
         else
             System.out.println("Lines are not equal");
+
+        // Check line comparison greater or less
+        int value = len_of_line1.compareTo(len_of_line2);
+        if (value < 0) {
+            System.out.println("Length of first line less than second line");
+        } else if (value > 0) {
+            System.out.println("Length of second line greater than first line");
+        } else {
+            System.out.println("Both lines are equal");
+        }
+
     }
 }
