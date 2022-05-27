@@ -1,13 +1,18 @@
 import java.util.Scanner;
 
 public class LineComparisonProgram {
+
     public static void main(String[] args) {
-
         System.out.println("Welcome to Line Comparison Computation Program");
+        LineComparisonProgram checkEquality = new LineComparisonProgram();
+        checkEquality.lengthCalculate();
+    }
 
-        // Calculate length of a line
+    void lengthCalculate() {
+
+        // Check equality of two length
         Scanner sc = new Scanner(System.in);
-        System.out.println("Calculation for first line length");
+        System.out.println("Calculate length of first line");
         System.out.print("Enter x1 co-ordinate: ");
         int x1 = sc.nextInt();
         System.out.print("Enter x2 co-ordinate: ");
@@ -17,16 +22,10 @@ public class LineComparisonProgram {
         System.out.print("Enter y2 co-ordinate: ");
         int y2 = sc.nextInt();
 
-        double x = Math.pow((x2 - x1), 2);
-        double y = Math.pow((y2 - y1), 2);
-        double len_of_line = Math.sqrt(x + y);
-        System.out.println("Length of the line is " + len_of_line);
+        Double len_of_line1 = Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2));
+        System.out.println("Length of first line is " + len_of_line1);
 
-        // Check equality of two length
-        double len_of_line1 = Math.sqrt(x + y);
-        System.out.println("Length of line 1 is " + len_of_line1);
-
-        System.out.println("Calculation for second line length");
+        System.out.println("Calculate length of second line");
         System.out.print("Enter x3 co-ordinate: ");
         int x3 = sc.nextInt();
         System.out.print("Enter x4 co-ordinate: ");
@@ -36,20 +35,23 @@ public class LineComparisonProgram {
         System.out.print("Enter y4 co-ordinate: ");
         int y4 = sc.nextInt();
 
-        double p = Math.pow((x4 - x3), 2);
-        double s = Math.pow((y4 - y3), 2);
-        double len_of_line2 = Math.sqrt(p + s);
-        System.out.println("Length of line 2 is " + len_of_line2);
+        Double len_of_line2 = Math.sqrt(Math.pow((x4 - x3), 2) + Math.pow((y4 - y3), 2));
+        System.out.println("Length of second line is " + len_of_line2);
 
-        if (len_of_line1 == len_of_line2)
-            System.out.println("Length are equal");
+        if (len_of_line1.equals(len_of_line2))
+            System.out.println("Lines are equal");
         else
-            System.out.println("Length are not equal");
+            System.out.println("Lines are not equal");
 
-        // Check comparison of two lines
-        if (len_of_line1 > len_of_line2)
-            System.out.println("Line 1 is greater than Line 2");
-        else
-            System.out.println("Line 1 is less than Line 2");
+        // Check line comparison greater or less
+        int value = len_of_line1.compareTo(len_of_line2);
+        if (value < 0) {
+            System.out.println("Length of first line less than second line");
+        } else if (value > 0) {
+            System.out.println("Length of second line greater than first line");
+        } else {
+            System.out.println("Both lines are equal");
+        }
+
     }
 }
